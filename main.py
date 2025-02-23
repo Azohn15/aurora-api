@@ -1,9 +1,13 @@
+import os
+
 from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
-@app.route('/chat', methods=['POST'])
+@app.route('/chat', methods=["POST"])
 def chat():
+    #código para requisição
+    if __name__ == "__main__": 
     data = request.json
     pergunta = data.get("pergunta", "")
 
