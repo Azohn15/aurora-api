@@ -3,8 +3,9 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
-@app.route('/chat', methods=["POST"])
-def chat():
+@app.route("/")
+def home():
+    return "API da Aurora está online! Use o endpoint /chat para conversar.", 200
     try:
         data = request.json  # Pega os dados JSON da requisição
         pergunta = data.get("pergunta", "")
